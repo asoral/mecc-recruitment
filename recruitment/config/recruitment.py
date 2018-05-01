@@ -19,13 +19,6 @@ def get_data():
                 },
                 {
                     "type": "doctype",
-                    "name": "Closure",
-                    "icon": "fa fa-star",
-                    "label": _("Closure"),
-                    "description": _("Documentation"),
-                },
-                {
-                    "type": "doctype",
                     "name": "Interview",
                     "label": _("Interview"),
                     "description": _("Interviews for Projects"),

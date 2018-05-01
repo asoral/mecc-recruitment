@@ -1,6 +1,5 @@
 import frappe
 import json
-import shortuuid
 from frappe import _
 from frappe.utils.data import today
 from frappe.utils import datetime, nowdate, add_days, flt
@@ -26,16 +25,7 @@ def confirm_register(testid, doc):
             })
             candidate.save(ignore_permissions=True)
 
-        #    frappe.db.set_value("Candidate", candidate, "registration_no", testid)
-        #.    frappe.db.set_value("Candidate", candidate, "status", "Registered")
-        #    frappe.db.set_value("Token Summary", token.name, "validity", "Invalid")
-            return testid
-        else:
-            return 'invalid'
-    else:
-        return 'invalid'
-
-
+        
 def get_candidate(candidate_id):
     candidate = frappe.get_doc("Candidate", candidate_id)
     return candidate

@@ -65,16 +65,8 @@ frappe.ui.form.on('Candidate', {
                 frm.doc.ecr = 0;
             }
         }
-        frm.set_query("project", function () {
-            return {
-                query: "recruitment.recruitment.doctype.candidate.candidate.get_projects",
-                filters: {
-                    customer: frm.doc.customer
-                }
-            };
-        });
-
-        frm.set_query("task", function () {
+        
+      frm.set_query("task", function () {
             return {
                 query: "recruitment.recruitment.doctype.candidate.candidate.get_tasks",
                 filters: {
